@@ -1,0 +1,25 @@
+@mixin btn($btn--fondo, $btn--texto, $btn--hover, $btn-fonts, $width) {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: $width;
+    height: 30px;
+    background-color: $btn--fondo;
+    border-radius: 100px;
+    color: $btn--texto;
+    font-family: $btn-fonts;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all ease-in .5s;
+    outline: none;
+    &:hover {
+        background-color: $btn--hover;
+    }
+    // @media screen and (max-width:320px) {
+    //     display: flex;
+    //     width: 90%;
+    //     margin: 0 auto;
+    // }
+}

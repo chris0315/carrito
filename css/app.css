@@ -1,0 +1,104 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.oculto {
+  display: none;
+  position: absolute;
+  left: -500px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 1rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.header .logo {
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+}
+
+.carrito-compras {
+  position: relative;
+}
+
+.carrito-compras:hover .contenido {
+  display: block;
+  position: absolute;
+  right: 0;
+  background-color: beige;
+  padding: 1rem;
+  max-width: 500px;
+}
+
+.carrito-compras:hover .contenido img {
+  max-width: 150px;
+}
+
+.carrito-compras:hover .contenido .boton {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 150px;
+  height: 30px;
+  background-color: #33c3f0;
+  border-radius: 100px;
+  color: #fff;
+  font-family: "arial";
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all ease-in .5s;
+  outline: none;
+}
+
+.carrito-compras:hover .contenido .boton:hover {
+  background-color: #2383a0;
+}
+
+input[type="submit"] {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 80px;
+  height: 30px;
+  background-color: #e44e52;
+  border-radius: 100px;
+  color: #fff;
+  font-family: "arial";
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all ease-in .5s;
+  outline: none;
+  border-radius: 0px;
+}
+
+input[type="submit"]:hover {
+  background-color: #993a3d;
+}
