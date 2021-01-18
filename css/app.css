@@ -252,3 +252,96 @@ body {
 }
 
 /* seccion principal */
+.cursos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.cursos .curso {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 calc(50% - 1rem);
+  flex: 0 1 calc(50% - 1rem);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  background-color: #efefef;
+  border: 1px solid #ccc;
+}
+
+@media only screen and (min-width: 768px) {
+  .cursos .curso {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 calc(30% - 1rem);
+    flex: 0 1 calc(30% - 1rem);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .cursos .curso {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 calc(25% - 1rem);
+    flex: 0 1 calc(25% - 1rem);
+  }
+}
+
+.cursos .curso .imagen-curso {
+  max-width: 100%;
+}
+
+.info-curso {
+  padding: 1rem;
+}
+
+.info-curso h4 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.info-curso .precio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.info-curso .precio .regular {
+  text-decoration: line-through;
+  color: #f85650;
+}
+
+.info-curso .precio .oferta {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #55f150;
+}
+
+.info-curso .boton {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 90%;
+  height: 30px;
+  background-color: #741d51;
+  border-radius: 100px;
+  color: #fff;
+  font-family: "arial";
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all ease-in .5s;
+  outline: none;
+  border-radius: 1px;
+}
+
+.info-curso .boton:hover {
+  background-color: #942668e1;
+}
