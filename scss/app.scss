@@ -28,6 +28,10 @@ body {
     left: -500px;
 }
 
+.centrado {
+    text-align: center;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -102,3 +106,65 @@ body {
         }
     }
 }
+
+
+/* barra */
+
+.barra {
+    min-height: 7rem;
+    @include gradient($secundario, $terciario);
+    color: $blanco;
+    display: flex;
+    align-items: center;
+    .iconos {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        @include desktop() {
+            flex-direction: row;
+        }
+        .icono {
+            flex: 1;
+            text-align: center;
+            margin-top: 1rem;
+            &.icono1 {
+                @include background_image("../img/icono1.png");
+                background-position: 15% center;
+                @include tablet() {
+                    background-position: 30% center;
+                }
+                @include desktop() {
+                    background-position: left center;
+                }
+                background-size: 2.8rem
+            }
+            &.icono2 {
+                @include background_image("../img/icono2.png");
+                background-position: 15% center;
+                @include tablet() {
+                    background-position: 30% center;
+                }
+                @include desktop() {
+                    background-position: left center;
+                }
+                background-size: 2.8rem
+            }
+            &.icono3 {
+                @include background_image("../img/icono3.png");
+                background-position: 15% center;
+                @include tablet() {
+                    background-position: 30% center;
+                }
+                @include desktop() {
+                    background-position: left center;
+                }
+                background-size: 2.8rem
+            }
+        }
+    }
+}
+
+
+/* seccion principal */
+
+.cursos {}
