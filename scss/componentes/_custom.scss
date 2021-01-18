@@ -1,0 +1,244 @@
+html {
+    @include box-sizing(border-box);
+}
+
+*,
+*::after,
+*::before {
+    @include box-sizing(inherit)
+}
+
+body {
+    font-family: $fuentePrincipal;
+}
+
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.oculto {
+    display: none;
+    position: absolute;
+    left: -500px;
+}
+
+.centrado {
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    align-items: center;
+    .logo {
+        padding-top: 1.4rem;
+        padding-bottom: 1.4rem;
+    }
+}
+
+.carrito-compras {
+    position: relative;
+    &:hover .contenido {
+        display: block;
+        position: absolute;
+        right: 0;
+        background-color: $colorCarrito;
+        padding: 1rem;
+        max-width: 500px;
+        img {
+            max-width: 150px;
+        }
+    }
+    .boton {
+        @include btn($principal, $blanco, #2383a0, "arial", 150px)
+    }
+}
+
+
+/* hero */
+
+.hero {
+    @include background_image("../img/hero.jpg");
+    background-size: cover;
+    min-height: 24rem;
+    color: $blanco;
+    display: flex;
+    align-items: center;
+    .contenido-hero {
+        flex: 1;
+        h2 {
+            font-weight: 400;
+            font-size: 2.4rem;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+        form {
+            position: relative;
+            @include tablet() {
+                width: 40%;
+            }
+            input[type="submit"] {
+                position: absolute;
+                right: 0;
+                top: 1px;
+                @include background_image("../img/lupa.png");
+                display: block;
+                text-indent: -999px;
+                width: 3rem;
+                height: 2.8rem;
+                outline: none;
+                border: none;
+                background-color: $blanco;
+                cursor: pointer;
+            }
+            input[type="text"] {
+                width: 100%;
+                height: 3rem;
+            }
+        }
+    }
+}
+
+
+/* barra */
+
+.barra {
+    min-height: 7rem;
+    @include gradient($secundario, $terciario);
+    color: $blanco;
+    display: flex;
+    align-items: center;
+    .iconos {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        @include desktop() {
+            flex-direction: row;
+        }
+        .icono {
+            flex: 1;
+            text-align: center;
+            margin-top: 1rem;
+            &.icono1 {
+                @include background_image("../img/icono1.png");
+                background-position: 15% center;
+                @include tablet() {
+                    background-position: 30% center;
+                }
+                @include desktop() {
+                    background-position: left center;
+                }
+                background-size: 2.8rem
+            }
+            &.icono2 {
+                @include background_image("../img/icono2.png");
+                background-position: 15% center;
+                @include tablet() {
+                    background-position: 30% center;
+                }
+                @include desktop() {
+                    background-position: left center;
+                }
+                background-size: 2.8rem
+            }
+            &.icono3 {
+                @include background_image("../img/icono3.png");
+                background-position: 15% center;
+                @include tablet() {
+                    background-position: 30% center;
+                }
+                @include desktop() {
+                    background-position: left center;
+                }
+                background-size: 2.8rem
+            }
+        }
+    }
+}
+
+
+/* seccion principal */
+
+.cursos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .curso {
+        flex: 0 1 calc(50% - 1rem);
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2rem;
+        background-color: $colorCard;
+        border: 1px solid #ccc;
+        @include tablet() {
+            flex: 0 1 calc(30% - 1rem);
+        }
+        @include desktop() {
+            flex: 0 1 calc(25% - 1rem);
+        }
+        .imagen-curso {
+            max-width: 100%;
+        }
+    }
+}
+
+.info-curso {
+    padding: 1rem;
+    h4 {
+        margin: 0;
+        font-size: 1.2rem;
+    }
+    .precio {
+        display: flex;
+        justify-content: space-between;
+        .regular {
+            text-decoration: line-through;
+            color: $colorRegular;
+        }
+        .oferta {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: $colorOferta;
+        }
+    }
+    .boton {
+        @include btn($secundario, $blanco, #942668e1, "arial", 90%) {
+            border-radius: 1px;
+        }
+    }
+}
+
+
+/* footer */
+
+.footer {
+    border-top: 1px solid #ccc;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    .contenedor-footer {
+        display: flex;
+        flex-direction: column;
+        @include telefono() {
+            flex-direction: row;
+        }
+    }
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    flex: 1;
+    @include desktop() {
+        flex: 0 1 calc(30% - 1rem);
+    }
+    a {
+        color: $negro;
+        text-decoration: none;
+        margin-bottom: .5rem;
+        margin-left: .6rem;
+    }
+}

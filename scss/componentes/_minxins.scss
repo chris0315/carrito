@@ -1,0 +1,30 @@
+@mixin background_image($imagen) {
+    background-image: url($imagen);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@mixin gradient($color1, $color2) {
+    background: linear-gradient(to right, $color1 0%, $color2 100%);
+}
+
+
+/* Media Query */
+
+@mixin telefono() {
+    @media only screen and (min-width: #{$telefono}) {
+        @content;
+    }
+}
+
+@mixin tablet() {
+    @media only screen and(min-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin desktop() {
+    @media only screen and(min-width: #{$desktop}) {
+        @content;
+    }
+}
